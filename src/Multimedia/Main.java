@@ -55,9 +55,11 @@ public class Main {
             scelta = Integer.parseInt(scanner.nextLine());
             if (scelta >= 1 && scelta <= 5) {
                 Multimedia elem = elementi[scelta - 1];
+
                 // Se è un'immagine, mostra l'immagine
                 if (elem instanceof Immagine) {
                     ((Immagine) elem).show();
+
                     // Se è riproducibile, avvia la riproduzione
                 } else if (elem instanceof Play) {
                     ((Play) elem).play();
@@ -66,6 +68,7 @@ public class Main {
                 System.out.println("Scelta non valida.");
             }
         }
+        //Scanner
         scanner.close();
     }
 }
